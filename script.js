@@ -3,6 +3,8 @@ let userTaskInput = document.getElementById(taskInput);
 let userAddTaskButton = document.getElementById(addTaskButton);
 let userTaskList = document.getElementById(taskList);
 
+let taskArray = getTasksFromLocalStorage();
+
 // 3.5 Implement the createTaskElement(taskObj) Function
 function createTaskElement(taskObj) {
     const taskItem = document.createElement("li");
