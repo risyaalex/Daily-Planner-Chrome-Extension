@@ -1,5 +1,7 @@
 
-
+let userTaskInput = document.getElementById(taskInput);
+let userAddTaskButton = document.getElementById(addTaskButton);
+let userTaskList = document.getElementById(taskList);
 
 // 3.5 Implement the createTaskElement(taskObj) Function
 function createTaskElement(taskObj) {
