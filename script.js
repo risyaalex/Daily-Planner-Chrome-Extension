@@ -80,3 +80,21 @@ function renderTasks() {
         taskList.appendChild(taskElement);
     }
 }
+
+userAddTaskButton.addEventListener("click", function() {
+    const taskText = taskInput.value;
+
+    if (taskText == "") {
+        return;
+    }
+
+    const newTask = createTask(taskText);
+
+    taskArray.push(newTask);
+
+    updateTasksInLocalStorage()
+
+    taskInput.value = ""
+
+    renderTasks()
+});
