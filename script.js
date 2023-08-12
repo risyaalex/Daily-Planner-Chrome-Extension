@@ -1,24 +1,33 @@
 
-let userTaskInput = document.getElementById(taskInput);
-let userAddTaskButton = document.getElementById(addTaskButton);
-let userTaskList = document.getElementById(taskList);
+let userTaskInput = document.getElementById("taskInput");
+let userAddTaskButton = document.getElementById("addTaskButton");
+let userTaskList = document.getElementById("taskList");
 
 let taskArray = getTasksFromLocalStorage();
 
 function getTasksFromLocalStorage() {
     
-    let tasksItems = localStorage.getItem('tasks') || [];
+    let tasksStorageArray = localStorage.getItem("tasks") || [];
 
-    let tasksStorageArray = [];
+    // if (tasksStorageArray!= 0) {
+    //     tasksStorageArray = JSON.parse(tasksStorageArray);
+    //     console.log("Yes")
+    // } else {
+    //     console.log("No")
+    // }
 
-    if (tasksItems) {
-        tasksStorageArray = JSON.parse(tasksItems);
-        console.log(tasksStorageArray)
-    } else {
-        console.log(tasksStorageArray)
-    }
     return tasksStorageArray;
+    
 }
+
+function updateTasksInLocalStorage() {
+    let updateTasks = JSON.stringify(taskArray);
+    localStorage.setItem("tasks", updateTasks);
+
+    // console.log(updateTasks);
+}
+
+updateTasksInLocalStorage();
 
 // 3.5 Implement the createTaskElement(taskObj) Function
 function createTaskElement(taskObj) {
