@@ -31,6 +31,11 @@ function createTask(taskText) {
     return { text: taskText, completed: false};
 }
 
+function deleteTask(index) {
+    taskArray.splice(index, 1);
+    updateTasksInLocalStorage();
+}
+
 // 3.5 Implement the createTaskElement(taskObj) Function
 function createTaskElement(taskObj) {
     const taskItem = document.createElement("li");
