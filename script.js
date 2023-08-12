@@ -5,6 +5,21 @@ let userTaskList = document.getElementById(taskList);
 
 let taskArray = getTasksFromLocalStorage();
 
+function getTasksFromLocalStorage() {
+    
+    let tasksItems = localStorage.getItem('tasks') || [];
+
+    let tasksStorageArray = [];
+
+    if (tasksItems) {
+        tasksStorageArray = JSON.parse(tasksItems);
+        console.log(tasksStorageArray)
+    } else {
+        console.log(tasksStorageArray)
+    }
+    return tasksStorageArray;
+}
+
 // 3.5 Implement the createTaskElement(taskObj) Function
 function createTaskElement(taskObj) {
     const taskItem = document.createElement("li");
