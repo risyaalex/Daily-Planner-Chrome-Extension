@@ -7,18 +7,20 @@ let taskArray = getTasksFromLocalStorage();
 
 function getTasksFromLocalStorage() {
     
-    let tasksStorageArray = localStorage.getItem("tasks") || [];
+    // return localStorage.getItem("tasks") || [];
 
-    // if (tasksStorageArray!= 0) {
-    //     tasksStorageArray = JSON.parse(tasksStorageArray);
-    //     console.log("Yes")
-    // } else {
-    //     console.log("No")
-    // }
+    let storedTasks = localStorage.getItem("tasks");
 
-    return tasksStorageArray;
-    
+    if (storedTasks == null) {
+        console.log("No")
+        return [];   
+    } else {
+        console.log("Yes")
+        return JSON.parse(storedTasks);    
+    }
 }
+
+console.log(taskArray)
 
 function updateTasksInLocalStorage() {
     let updateTasks = JSON.stringify(taskArray);
@@ -73,16 +75,16 @@ function createTaskElement(taskObj) {
 
 function renderTasks() {
 
-    taskList.innerHTML = ""
+    userTaskList.innerHTML = ""
 
     for (let i = 0; i < taskArray.length; i++) {
         let taskElement = createTaskElement(taskArray[i]);
-        taskList.appendChild(taskElement);
+        userTaskList.appendChild(taskElement);
     }
 }
 
 userAddTaskButton.addEventListener("click", function() {
-    const taskText = taskInput.value;
+    const taskText = userTaskInput.value;
 
     if (taskText == "") {
         return;
@@ -94,7 +96,7 @@ userAddTaskButton.addEventListener("click", function() {
 
     updateTasksInLocalStorage()
 
-    taskInput.value = ""
+    userTaskInput.value = ""
 
     renderTasks()
 });
