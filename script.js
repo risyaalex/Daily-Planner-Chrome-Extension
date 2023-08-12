@@ -70,3 +70,13 @@ function createTaskElement(taskObj) {
   
     return taskItem;
 }
+
+function renderTasks() {
+
+    taskList.innerHTML = ""
+
+    for (let i = 0; i < taskArray.length; i++) {
+        let taskElement = createTaskElement(taskArray[i]);
+        taskList.appendChild(taskElement);
+    }
+}
