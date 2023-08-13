@@ -63,7 +63,8 @@ function createTaskElement(taskObj) {
     removeButton.classList.add("removeButton");
     removeButton.textContent = "X";
     removeButton.addEventListener("click", function () {
-        deleteTask(taskObj);
+        // deleteTask(taskObj);
+        deleteTask(taskArray.indexOf(taskObj));
         renderTasks();
     });
   
