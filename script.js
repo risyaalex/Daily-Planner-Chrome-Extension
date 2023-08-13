@@ -1,6 +1,7 @@
 
 let userTaskInput = document.getElementById("taskInput");
 let userAddTaskButton = document.getElementById("addTaskButton");
+let usershowTaskButton = document.getElementById("showTaskButton");
 let userTaskList = document.getElementById("taskList");
 
 let taskArray = getTasksFromLocalStorage();
@@ -99,4 +100,9 @@ userAddTaskButton.addEventListener("click", function() {
     userTaskInput.value = ""
 
     renderTasks()
+});
+
+usershowTaskButton.addEventListener("click", function () {
+    if (taskArray !== 0) console.log(taskArray)
+    renderTasks();
 });

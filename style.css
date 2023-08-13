@@ -8,7 +8,7 @@ body {
 }
 
 h1 {
-  color: #333;
+  color: #45228b;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -24,14 +24,27 @@ h1 {
 
 #taskInput:focus {
   outline: none;
-  border-color: #4caf50;
+  border-color: #794bcf;
 }
 
 #addTaskButton {
   display: block;
   width: 100%;
   padding: 10px;
-  background-color: #4caf50;
+  background-color: #5a28b8;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#showTaskButton {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #666666;
   color: white;
   font-size: 16px;
   border: none;
@@ -41,7 +54,11 @@ h1 {
 }
 
 #addTaskButton:hover {
-  background-color: #45a049;
+  background-color: #45228b;
+}
+
+#showTaskButton:hover {
+  background-color: #333333;
 }
 
 #taskList {
