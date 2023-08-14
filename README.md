@@ -2,7 +2,7 @@
 
 A Daily Planner Extension for Chrome that allows users to add tasks, mark them as completed, and delete them.
 
-![image](https://github.com/risyaalex/Daily-Planner-Chrome-Extension/assets/140414559/638c8bb9-c74b-4998-8583-0f211885cb9d)
+![image](https://github.com/risyaalex/Daily-Planner-Chrome-Extension/assets/140414559/5b8ca3b3-61fa-41d5-be22-3f5697603f37)
 
 
 ## Built with
