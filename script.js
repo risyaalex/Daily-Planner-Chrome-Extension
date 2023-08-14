@@ -104,7 +104,7 @@ function renderTasks() {
 // Add a task when "Add Task" button is clicked
 
 userAddTaskButton.addEventListener("click", function() {
-    const taskText = userTaskInput.value;
+    const taskText = userTaskInput.value.trim();
 
     if (taskText == "") {
         return;
